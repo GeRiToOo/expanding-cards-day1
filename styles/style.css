@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+main {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.one {
+    background-image: url(../images/aerial-beautiful-shot-seashore-with-hills-background-sunset.jpg);
+}
+
+.two {
+    background-image: url(../images/exotic-tropical-beach-landscape-background-wallpaper-sundown-beach-scene-travel-inspirational-summer-holiday-vacation-concept-tourism-relaxing.jpg);
+}
+
+.three {
+    background-image: url(../images/seljalandsfoss-waterfall-during-sunset-beautiful-waterfall-iceland.jpg);
+}
+
+.four {
+    background-image: url(../images/ocean-coastline-landscape.jpg);
+}
+
+.five {
+    background-image: url(../images/wide-angle-shot-of-single-tree-growing-under-clouded-sky-during-sunset-surrounded-by-grass.jpg);
+}
+
+.panel {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 0.8em;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.5s;
+}
+
+@media screen and (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display:none;
+    }
+}
